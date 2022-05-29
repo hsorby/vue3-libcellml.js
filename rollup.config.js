@@ -10,6 +10,7 @@ export default {
     {
       file: 'dist/vue3-libcellml.js.cjs.js',
       format: 'cjs',
+      exports: 'default',
     },
     {
       file: 'dist/vue3-libcellml.js.es.js',
