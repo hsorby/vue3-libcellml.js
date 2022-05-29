@@ -21,6 +21,7 @@ export default {
       format: 'umd',
       globals: {
         'libcellml.js': 'libcellml.js',
+        vue: 'Vue',
       },
     },
   ],

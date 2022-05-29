@@ -1,10 +1,9 @@
 {
   "name": "vue3-libcellml.js",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.0",
   "description": "Vue 3 plugin for libcellml.js",
-  "main": "./dist/vue3-libcellml.js.cjs.js",
+  "main": "./dist/vue3-libcellml.js.umd.js",
   "module": "./dist/vue3-libcellml.js.es.js",
-  "unpkg": "./dist/vue3-libcellml.js.umd.js",
   "exports": {
     ".": {
       "import": "./dist/vue3-libcellml.js.es.js",
@@ -33,7 +32,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "libcellml.js": "file:<some-path>"
+    "libcellml.js": "^0.2.0-dev.23"
   },
   "peerDependencies": {
     "vue": "^3.2.13"

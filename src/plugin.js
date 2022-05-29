@@ -1,4 +1,4 @@
-import init from 'libcellml.js'
+import createLibCellML from 'libcellml.js'
 
 /**
  * Install function for installing plugin into Vue 3 application.
@@ -7,7 +7,7 @@ import init from 'libcellml.js'
  * @param {Object} options
  */
 function install(app) {
-  init().then((module) => {
+  createLibCellML().then((module) => {
     app.provide('$libcellml', module)
   })
 }
