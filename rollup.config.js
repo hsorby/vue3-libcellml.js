@@ -1,4 +1,4 @@
-import vue from 'rollup-plugin-vue'
+import vue from '@vitejs/plugin-vue'
 import commonjs from '@rollup/plugin-commonjs'
 import buble from '@rollup/plugin-buble'
 import { terser } from 'rollup-plugin-terser'
