@@ -1295,10 +1295,10 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-libcellml.js@^0.2.0-dev.24:
-  version "0.2.0-dev.24"
-  resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.2.0-dev.24.tgz#31fbc9b4d2e2c4036a9d3dfb84ac2b3d06a570ca"
-  integrity sha512-YUepk0f2tCmkagEiMNOCxodXzO1kd/K9ozAeT8xulwoS/5dyNAD6GypSPeG536O9jzyFqG+2BwtUC0tw7ZIjEg==
+libcellml.js@^0.3.104:
+  version "0.3.104"
+  resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.3.104.tgz#b715496b5f3fca1ce2fe8b0ba651f0f7cbfc74c1"
+  integrity sha512-A/2XpxGHtxXQQrOEdHpDjnFpBMMb/3x3IMJGnH17ZAbMo2otgPVsN7wBgPq5g9e/2I+HYmyFsK48fF/Ns0bsNA==
 
 lodash.merge@^4.6.2:
   version "4.6.2"

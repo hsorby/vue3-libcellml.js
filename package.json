@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "libcellml.js": "^0.2.0-dev.24"
+    "libcellml.js": "^0.3.104"
   },
   "peerDependencies": {
     "vue": "^3.2.13"
