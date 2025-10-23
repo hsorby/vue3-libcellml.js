@@ -1,6 +1,6 @@
 {
   "name": "vue3-libcellml.js",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Vue 3 plugin for libcellml.js",
   "main": "./dist/vue3-libcellml.js.umd.js",
   "module": "./dist/vue3-libcellml.js.es.js",
