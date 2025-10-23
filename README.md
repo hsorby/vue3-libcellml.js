@@ -7,20 +7,51 @@ Vue3-libcellml.js uses the key '$libcellml' to the Vue3 providing and injecting 
 Example usage, (composition API):
 
 ```vue
+<template>
+  <button :disabled="libcellml.status !== 'ready'" type="primary">
+    Load CellML
+  </button>
+</template>
+
 <script setup>
   import { inject } from 'vue'
 
   const libcellml = inject('$libcellml')
+
+  function processCellML(content) {
+    let parser = new libcellml.library.Parser()
+    let model = parser.parseModel(content)
+
+    console.log(model.name())
+
+    model.delete()
+    parser.delete()
+  }
 </script>
 ```
 
-The libcellml object has two keys: 'state', 'module'.
+The libcellml object has two keys: 'state', 'library'.
 The 'state' key reports the state of the module, this can either be 'loading' or 'ready'.
 A state of 'loading' indicates that libcellml.js is currently being loaded and is not ready for use.
 A state of 'ready' indicates that libcellml.js has finished loading and it is ready for using.
 
-The 'module' key holds a reference to the libcellml.js module.
-While libcellml.js is loading the 'module' will be *undefined*.
+The 'library' key holds a reference to the libcellml.js module.
+While libcellml.js is loading the 'library' will be *undefined*.
+
+If you want to do something as soon as the module has loaded you can do the following:
+
+```vue
+<script setup>
+import { inject } from "vue"
+
+const libcellmlReadyPromise = inject("$libcellml_ready")
+
+onMounted(async () => {
+  await libcellmlReadyPromise
+  // libcellml.js has loaded now
+})
+</script>
+```
 
 ## Install
 
