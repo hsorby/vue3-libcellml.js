@@ -1,6 +1,8 @@
 import createLibCellML from 'libcellml.js'
 import { reactive } from 'vue'
 
+const moduleLoadPromise = createLibCellML()
+
 /**
  * Install function for installing plugin into Vue 3 application.
  *
@@ -9,15 +11,17 @@ import { reactive } from 'vue'
  */
 function install(app) {
   const libcellml = reactive({
-    state: 'loading',
-    module: undefined,
+    status: 'loading',
+    library: null, 
   })
 
   app.provide('$libcellml', libcellml)
 
-  createLibCellML().then((module) => {
-    libcellml.state = 'ready'
-    libcellml.module = module
+  app.provide('$libcellml_ready', moduleLoadPromise)
+
+  moduleLoadPromise.then((module) => {
+    libcellml.status = 'ready'
+    libcellml.library = module
   })
 }
 
