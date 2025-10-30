@@ -15,10 +15,14 @@
   ],
   "author": "Hugh Sorby",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/libcellml/vue3-libcellml.js/issues"
-  },
   "homepage": "https://libcellml.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsorby/vue3-libcellml.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hsorby/vue3-libcellml.js/issues"
+  },
   "keywords": [
     "Vue",
     "Vue3",
