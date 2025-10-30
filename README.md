@@ -53,6 +53,33 @@ onMounted(async () => {
 </script>
 ```
 
+You also need to stop vite from optomising this dependency.
+An example `vite.config.js` is:
+
+```javascript
+import { defineConfig } from "vite"
+import vue from "@vitejs/plugin-vue"
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+  ],
+  server: {
+    fs: {},
+  },
+  optimizeDeps: {
+    // Exclude the wasm-based library from pre-bundling
+    exclude: ["vue3-libcellml.js"],
+    esbuildOptions: {
+      target: "es2020",
+    },
+  },
+})
+```
+
+The reason this is required is not fully understood at this time.
+
 ## Install
 
 `yarn add vue3-libcellml.js`
