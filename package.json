@@ -26,9 +26,9 @@
     "CellML"
   ],
   "scripts": {
-    "build": "vite build",
+    "build-lib": "vite build",
     "lint": "eslint --config eslint.config.mjs",
-    "prepublish": "yarn run lint && yarn run build"
+    "prepublish": "yarn run lint && yarn run build-lib"
   },
   "dependencies": {
   },
