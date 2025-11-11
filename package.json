@@ -32,13 +32,13 @@
   "scripts": {
     "build-lib": "vite build",
     "lint": "eslint --config eslint.config.mjs",
-    "prepublish": "yarn run lint && yarn run build-lib"
+    "prepublish": "yarn lint && yarn build-lib"
   },
   "dependencies": {
+    "libcellml.js": "^0.6.2"
   },
   "peerDependencies": {
-    "vue": "^3.5.12",
-    "libcellml.js": "^0.6.2"
+    "vue": "^3.5.12"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.2",
