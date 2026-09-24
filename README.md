@@ -30,10 +30,10 @@ Example usage, (composition API):
 </script>
 ```
 
-The libcellml object has two keys: 'state', 'library'.
-The 'state' key reports the state of the module, this can either be 'loading' or 'ready'.
-A state of 'loading' indicates that libcellml.js is currently being loaded and is not ready for use.
-A state of 'ready' indicates that libcellml.js has finished loading and it is ready for using.
+The libcellml object has two keys: 'status', 'library'.
+The 'status' key reports the status of the module, this can either be 'loading' or 'ready'.
+A status of 'loading' indicates that libcellml.js is currently being loaded and is not ready for use.
+A status of 'ready' indicates that libcellml.js has finished loading and it is ready for using.
 
 The 'library' key holds a reference to the libcellml.js module.
 While libcellml.js is loading the 'library' will be *undefined*.
